@@ -1,8 +1,10 @@
 window.onload = function() {
 
   MAX_SEQ = 80
-  var canvas = document.getElementById('mandelbrot_draw');
+  var canvas = document.getElementById('canvas');
   var context = canvas.getContext('2d');
+  context.canvas.width = window.innerWidth;
+  context.canvas.height = (850 * window.innerWidth) / 1300;
   var width = canvas.width;
   var height = canvas.height;
   var imagedata = context.createImageData(width, height);
